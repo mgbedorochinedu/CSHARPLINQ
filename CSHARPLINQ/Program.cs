@@ -16,7 +16,7 @@ foreach (int number in numbers)
 
 //....................................................................................................
 
-Console.WriteLine("Using LINQ");
+Console.WriteLine("Using Query LINQ Syntax");
 
 //Step 1: Getting data source
 List<int> numbersLinq = new List<int> { 1, 2, 3, 4, 5, 6 };
@@ -34,7 +34,7 @@ foreach (int number in query)
 //........................................................................................................
 
 
-//Problem Statements:
+//Problem Statements: Section One
 
 // Write a simple C# program to declare a list of integer values, followed by a simple LINQ query to check for even numbers, and finally print them to the console.
 Console.WriteLine("Even Number Solutions");
@@ -48,10 +48,6 @@ foreach(int evenNumber in queryNumber)
 {
     Console.WriteLine(evenNumber);
 }
-
-//..................................................................................................
-
-
 
 
 
