@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypesOfLinqSyntax", "TypesO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToObjects", "LinqToObjects\LinqToObjects.csproj", "{CE5E57B3-10C3-4FFA-9761-D9B917696869}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqProjection", "LinqProjection\LinqProjection.csproj", "{32A46D4C-638C-499E-9835-480CB4706611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CE5E57B3-10C3-4FFA-9761-D9B917696869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE5E57B3-10C3-4FFA-9761-D9B917696869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE5E57B3-10C3-4FFA-9761-D9B917696869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A46D4C-638C-499E-9835-480CB4706611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A46D4C-638C-499E-9835-480CB4706611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A46D4C-638C-499E-9835-480CB4706611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A46D4C-638C-499E-9835-480CB4706611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
