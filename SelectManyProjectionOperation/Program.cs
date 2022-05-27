@@ -4,8 +4,8 @@ using UI.Models;
 Console.WriteLine("Hello, World!");
 
 
-Console.WriteLine("LINQ SELECT ANNONYMOUS:");
-//LINQ SELECT ANNONYMOUS
+Console.WriteLine("LINQ SELECT MANY PROJECTION OPERATION:");
+//LINQ SELECT MANY PROJECTION OPERATION
 
 List<Student> students = new List<Student>();
 

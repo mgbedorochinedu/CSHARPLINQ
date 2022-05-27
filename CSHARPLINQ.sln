@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqProjection", "LinqProje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectManyProjectionOperation", "SelectManyProjectionOperation\SelectManyProjectionOperation.csproj", "{70E873F7-E7FA-44F5-876C-A96E8210E21B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSorting", "LinqSorting\LinqSorting.csproj", "{0A93D97B-95E7-4EAF-BF57-7A395F938772}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{70E873F7-E7FA-44F5-876C-A96E8210E21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70E873F7-E7FA-44F5-876C-A96E8210E21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70E873F7-E7FA-44F5-876C-A96E8210E21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A93D97B-95E7-4EAF-BF57-7A395F938772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A93D97B-95E7-4EAF-BF57-7A395F938772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A93D97B-95E7-4EAF-BF57-7A395F938772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A93D97B-95E7-4EAF-BF57-7A395F938772}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
