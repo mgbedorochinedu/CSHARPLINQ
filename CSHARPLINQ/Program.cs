@@ -100,6 +100,10 @@ using CSHARPLINQ.Model;
 //    Console.WriteLine(item);
 //}
 
+
+
+
+
 //=============================================================================================================
 
 
@@ -112,6 +116,71 @@ using CSHARPLINQ.Model;
 //=======================================================================================
 
 
+
+
+//List<Student> students = new List<Student>();
+//List<Course> courses = new List<Course>();
+
+//void Initialize()
+//{
+//    students.Add(new Student(101, "James", "Smith", 1));
+//    students.Add(new Student(102, "Robert", "Michael", 2));
+//    students.Add(new Student(103, "Maria", "Johnson", 3));
+//    students.Add(new Student(104, "David", "Smith", 1));
+//    students.Add(new Student(105, "Emma", "Dalot", 2));
+//    students.Add(new Student(106, "Chika", "Smith", 3));
+//    students.Add(new Student(107, "Obinna", "Obi", 1));
+//    students.Add(new Student(108, "Emeka", "Michael", 2));
+
+//    courses.Add(new Course(1, "Computer Scrience"));
+//    courses.Add(new Course(2, "Psychology"));
+//    courses.Add(new Course(3, "Accounting"));
+
+
+//}
+
+
+//Initialize();
+
+
+//Console.WriteLine("Query Syntax:");
+////Query Syntax
+//var query = from student in students
+//            join course in courses
+//            on student.CourseId equals course.CourseId
+//            select new {student.StudentId, student.FirstName, course.CourseName };
+
+//foreach (var item in query)
+//{
+//    Console.WriteLine($"{item.StudentId} - {item.FirstName} - {item.CourseName}");
+//}
+
+
+//Console.WriteLine("==========================================================================================");
+
+////==========================================================================================
+
+
+//Console.WriteLine("Method Syntax:");
+////Method Syntax
+//var method = students.Join(courses, student => student.CourseId,
+//    course => course.CourseId,
+//    (s, c) => new { s.StudentId, s.FirstName, c.CourseName });
+
+//foreach (var item in method)
+//{
+//    Console.WriteLine($"{item.StudentId} - {item.FirstName} - {item.CourseName}");
+//}
+
+
+
+
+
+
+
+//=======================================================================================
+//JOIN OPERATIONS - GROUP JOIN  ======================================================================
+//=======================================================================================
 
 
 List<Student> students = new List<Student>();
@@ -131,46 +200,52 @@ void Initialize()
     courses.Add(new Course(1, "Computer Scrience"));
     courses.Add(new Course(2, "Psychology"));
     courses.Add(new Course(3, "Accounting"));
-     
+
 
 }
 
 
 Initialize();
 
-
-
-
 Console.WriteLine("Query Syntax:");
 //Query Syntax
-var query = from student in students
-            join course in courses
-            on student.CourseId equals course.CourseId
-            select new {student.StudentId, student.FirstName, course.CourseName };
+var query = from course in courses
+            join student in students
+            on course.CourseId equals student.CourseId
+            into courseStudents 
+            select new { course.CourseName, courseStudents };
 
 foreach (var item in query)
 {
-    Console.WriteLine($"{item.StudentId} - {item.FirstName} - {item.CourseName}");
+    Console.WriteLine("\n" + item.CourseName);
+
+    foreach(var student in item.courseStudents)
+    {
+        Console.WriteLine($"{student.StudentId} {student.LastName}");
+    }
 }
 
 
-Console.WriteLine("==========================================================================================");
+Console.WriteLine("=======================================================================================================");
 
 //==========================================================================================
 
-
 Console.WriteLine("Method Syntax:");
 //Method Syntax
-var method = students.Join(courses, student => student.CourseId,
+var method = courses.GroupJoin(students,
     course => course.CourseId,
-    (s, c) => new { s.StudentId, s.FirstName, c.CourseName });
+    student => student.CourseId,
+    (c, courseStudents) => new { c.CourseName, courseStudents });
 
 foreach (var item in method)
 {
-    Console.WriteLine($"{item.StudentId} - {item.FirstName} - {item.CourseName}");
+    Console.WriteLine("\n" + item.CourseName);
+
+    foreach (var student in item.courseStudents)
+    {
+        Console.WriteLine($"{student.StudentId} {student.LastName}");
+    }
 }
-
-
 
 
 
